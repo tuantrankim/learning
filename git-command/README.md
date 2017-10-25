@@ -88,7 +88,11 @@ Switch to master branch
     $git merge contact-changes
     $git push origin master
 
+Delete remote branch
+
+    $git push -d origin contact-changes
     
+
 
 In the simplest terms, git pull does a git fetch followed by a git merge. Git pull is what you would do to bring a local branch up-to-date with remote version
     $git pull
