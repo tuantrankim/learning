@@ -7,14 +7,17 @@ https://www.youtube.com/watch?v=j1oFazXrzN4
     (1)                     <=                          (3) git merge   <=  (4) git fetch
 
 Initialize project
+
     mkdir project
     cd project
     $git init
 
 add a file: homepage.html
+
     $git add homepage.html
     $git commit -m 'added homepage file'
 
 add a file: contact.html
+
     $git add --all
     $git commit -m 'added contact page'
