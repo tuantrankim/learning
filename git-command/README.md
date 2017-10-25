@@ -77,5 +77,7 @@ Delete a branch
 ## Branch contact-change merge to Master from remote
 ## Branch contact-change merge to Master from remote
 
+##home changes test
+
 In the simplest terms, git pull does a git fetch followed by a git merge. Git pull is what you would do to bring a local branch up-to-date with remote version
     $git pull
