@@ -29,6 +29,10 @@ Push to remote server
     $git remote add origin https://github.com/tuantrankim/learning.git
 	$git push -u origin master
 
+## View history
+
+    $git log
+
 ## Clone a project
 
     $git clone https://github.com/tuantrankim/Pluralsight.git
@@ -39,6 +43,7 @@ Push to remote server
 ## Undo an add command
 
     $git reset <files>
+    same with old version command
     $git reset HEAD <files>
     $git reset
 
@@ -129,7 +134,12 @@ View remote branch
 
     $git branch -r
 
+In the simplest terms, git pull does a git fetch followed by a git merge. Git pull is what you would do to bring a local branch up-to-date with remote version
+
+    $git pull
+
 ## Git ignore files
+
 create a file name .gitignore
 add ignore files like
 
@@ -137,13 +147,3 @@ add ignore files like
     out/*
     bin/*
     .idea/*
-
-## Git pull
-
-In the simplest terms, git pull does a git fetch followed by a git merge. Git pull is what you would do to bring a local branch up-to-date with remote version
-
-    $git pull
-
-## View history
-
-    $git log
