@@ -47,6 +47,15 @@ Push to remote server
     $git reset HEAD <files>
     $git reset
 
+Undo a commit
+
+    $git reset HEAD^
+
+Discard all change
+
+    git fetch
+    git reset --hard origin/master
+
 ## Using remote
 
     $git remote add origin https://github.com/tuantrankim/learning
