@@ -52,6 +52,7 @@ Push to remote server
     $git remote add origin https://github.com/tuantrankim/learning
 
 View current remote
+
     $git remote
 
 Push master branch in current remote which is origin
