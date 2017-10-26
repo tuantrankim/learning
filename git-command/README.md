@@ -6,6 +6,8 @@ https://www.youtube.com/watch?v=j1oFazXrzN4
     (1)                     <=                          (3) git checkout<=  (4) git fetch
     (1)                     <=                          (3) git merge   <=  (4) git fetch
 
+    $git help
+
 ## Initialize project
 
     mkdir project
@@ -22,6 +24,24 @@ Add a file: contact.html
     $git add --all
     $git commit -m 'added contact page'
 
+Push to remote server
+
+    $git remote add origin https://github.com/tuantrankim/learning.git
+	$git push -u origin master
+
+## Clone a project
+
+    $git clone https://github.com/tuantrankim/Pluralsight.git
+    
+    or clone to a different folder name
+    $git clone <url> <alias folder>
+
+## Undo an add command
+
+    $git reset <files>
+    $git reset HEAD <files>
+    $git reset
+
 ## Using remote
 
     $git remote add origin https://github.com/tuantrankim/learning
@@ -29,10 +49,12 @@ Add a file: contact.html
 View current remote
     $git remote
 
-Push master branch in current remote which is origin  
+Push master branch in current remote which is origin
+
     $git push origin master
 
 Delete a remote
+
     $git remote add learning https://github.com/tuantrankim/learning
     $git remote
     $git remote remove learning
@@ -76,6 +98,7 @@ Delete a branch
 ## Branch contact-change merge to Master from remote
 
     $git checkout contact-changes
+
 Edit some files then
 
     $git add .
@@ -91,8 +114,36 @@ Switch to master branch
 Delete remote branch
 
     $git push -d origin contact-changes
-    
 
+## Git pull from remote
+
+Fetch from remote Master branch to home-changes branch
+
+    $git fetch origin master:home-changes
+
+Delete remote branch (or push empty to home-changes)
+
+    $git push origin :home-changes
+
+View remote branch
+
+    $git branch -r
+
+## Git ignore files
+create a file name .gitignore
+add ignore files like
+
+    *.iml
+    out/*
+    bin/*
+    .idea/*
+
+## Git pull
 
 In the simplest terms, git pull does a git fetch followed by a git merge. Git pull is what you would do to bring a local branch up-to-date with remote version
+
     $git pull
+
+## View history
+
+    $git log
