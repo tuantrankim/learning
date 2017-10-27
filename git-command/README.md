@@ -53,8 +53,30 @@ Undo a commit
 
 Discard all change
 
-    git fetch
-    git reset --hard origin/master
+    $git fetch
+    $git reset --hard origin/master
+
+## Remove untracked files from the working tree
+
+Show what will be deleted
+
+    $git clean -n
+
+Delete file
+
+    $git clean -f
+
+Delete file and folder
+
+    $git clean -fd
+
+Delete ignored file
+
+    $git clean -fX
+
+Delete ignored and non-ignored files
+
+    $git clean -fx
 
 ## Using remote
 
