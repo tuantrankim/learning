@@ -51,10 +51,12 @@ Undo a commit
 
     $ git reset HEAD^
 
-Discard all change
+Discard all changes
 
     $ git fetch
     $ git reset --hard origin/master
+    or
+    $ git checkout .
 
 ## Remove untracked files from the working tree
 
