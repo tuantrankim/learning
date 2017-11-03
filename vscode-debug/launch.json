@@ -9,8 +9,9 @@
             "request": "launch",
             "name": "Launch Chrome",
             "url": "http://localhost:3000",
-            "webRoot": "${workspaceRoot}"
+            "webRoot": "${workspaceRoot}",
            //"webRoot":"c:/tuan/github/learning/react-app"
+           "skipFiles": ["c:/tuan/github/learning/react-app/node_modules"]
         },
         {
             //To attach a chrome process
