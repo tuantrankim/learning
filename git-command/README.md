@@ -159,6 +159,8 @@ Delete remote branch
 When switching branches, but don't want to commit. You can save your dirty state onto your stack
 
     $ git stash
+    stash with a name
+    $ git stash save 'save changes to stash'
     $ git status
 
 To view stash list
@@ -169,6 +171,8 @@ To apply latest stash, apply stash by naming
     
     $ git stash apply
     $ git stash apply stash@{2}
+    Or by name
+    $ git stash apply stash^{/'save changes to stash'}
 
 Reapply the stage changes
 
