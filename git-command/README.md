@@ -231,3 +231,11 @@ add ignore files like
     out/*
     bin/*
     .idea/*
+
+## Copy existing project to git folder
+
+	1-copy the project to git folder
+	2-delete .git hidden folder
+	3-clear cache
+	> git rm --cached . -f
+	4-add, commit, and push to github
