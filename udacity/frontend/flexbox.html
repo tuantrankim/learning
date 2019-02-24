@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex box</title>
+
+    <style  type="text/css">
+    *{
+        margin: 0;
+    }
+    
+    @media screen and (min-width: 700px){
+        .dark_blue {order:4;}
+        .light_blue{order:5;}
+        .green{order:2}
+        .orange{order:3}
+        .red{order:1}
+    }
+
+    .container{
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+    }
+    
+    .box {
+        width: 20%;
+        min-width: 100px;
+        height: 100px;
+
+    }
+    .dark_blue{
+        background-color: darkblue;
+    }
+    .light_blue{
+        background-color: lightblue;
+    }
+    .green{
+        background-color: green;
+    }
+    .orange{
+        background-color: orange;
+    }
+    .red{
+        background-color: red;
+    }
+
+    .box1 {
+        min-width: 100px;
+        height: 100px;
+    }
+    .header{width:100%; order:1;background-color: yellow;}
+    .red_box{width:50%; order:2;background-color: red;}
+    .orange_box{width:50%; order:3;background-color: orange;}
+    .footer{width:100%; order:4;background-color: yellow;}
+    .light_blue_box{width:20%; order:5;background-color: lightblue;}
+    .dark_blue_box{width:60%; order:6;background-color: darkblue;}
+    .green_box{width:20%; order:7;background-color: green;}
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box dark_blue">  dfsafdsa</div>
+        <div class="box light_blue"> fdsafdsa</div>
+        <div class="box green"> fdafd</div>
+        <div class="box orange"> fdafd</div>
+        <div class="box red"> fdafd</div>
+    </div>
+    
+    <div class="container">
+        <div class="box header">fdsa</div>
+        <div class="box red_box">fdsa</div>
+        <div class="box orange_box">fdsa</div>
+        <div class="box footer">fdsa</div>
+        <div class="box light_blue_box">fdsa</div>
+        <div class="box dark_blue_box">fdsa</div>
+        <div class="box green_box">fdsa</div>
+    </div>
+</body>
+</html>

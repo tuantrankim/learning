@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drop column</title>
+    
+    <style  type="text/css">
+        *{margin: 0px;}
+
+        .container{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box{
+            height: 100px;
+            min-width: 100px;
+        }
+
+        .red{
+            width: 25%;
+            background-color: red;
+        }
+        .green{
+            width:75%;
+            background-color:green;
+        }
+        .blue{
+        width:100%;
+            background-color:blue;
+        }
+
+        @media screen and (min-width: 500px) {
+            /* body{display:none;} */
+        
+            .red {
+                width: 50%;
+            }
+            .green {
+                width: 25%;
+            }
+            .blue {
+                width: 25%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box red"> g gfds</div>
+        <div class="box green"> fgds gfds</div>
+        <div class="box blue"> fgdsgr</div>
+    </div>
+</body>
+</html>
