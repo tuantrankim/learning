@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex box - mostly fluid</title>
+
+    <style>
+    *{margin: 0px}
+    
+    .container{
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box{
+        height:100px;
+        width:100%;
+    }
+    .red{background-color:red; order:1;}
+    .orange{background-color:orange; order:2;}
+    .yellow{background-color:yellow; order:3;}
+    .green{background-color:green; order:4;}
+    .blue{background-color:blue; order:5;}
+    .purple{background-color:purple; order:6;}
+
+    @media screen and (min-width:450px) {
+        /* body{display: none} */
+    .red{width:100%}
+    .orange{width:50%}
+    .yellow{width:50%}
+    .green{width:100%}
+    .blue{width:100%}
+    .purple{width:100%}
+    }
+
+    @media screen and (min-width:550px) {
+        /* body{display: none} */
+    .red{width:50%}
+    .orange{width:50%}
+    .yellow{width:33.3333333%}
+    .green{width:33.3333333%}
+    .blue{width:33.3333333%}
+    .purple{width:100%}
+    }
+
+    @media screen and (min-width:700px) {
+        .container{
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box red"></div>
+        <div class="box orange"></div>
+        <div class="box yellow"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+        <div class="box purple"></div>
+    </div>
+</body>
+</html>
