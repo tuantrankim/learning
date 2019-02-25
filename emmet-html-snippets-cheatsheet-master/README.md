@@ -100,3 +100,7 @@ Here's some extra ones to know!
 > input:text|email|password|date|number|submit|button
 
 > btn
+
+### Multiple cursors
+
+ATL + Click to add or remove a cursor
