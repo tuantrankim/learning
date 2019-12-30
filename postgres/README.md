@@ -24,16 +24,18 @@
 >sudo su postgres
 
 # Postgres IDE
+```
 >man psql
 >psql
 
-- list all the databases
+list all the databases
 
 >\l
 
 - list all the users
 
 >\du
+```
 
 #### Change password of default user - don't forget ';'
 
@@ -73,8 +75,6 @@ SELECT
    rolname
 FROM
    pg_roles;
-   
-
 ```
 
 #### The following statement creates a role that has login privilege, password, and valid date.
@@ -94,6 +94,8 @@ FROM
 >CREATE ROLE security CREATEROLE;
 
 #### Group role
+
+```
 -By convention, a group role does not have LOGIN privilege.
 
 -To create a group role, you use the CREATE ROLE statement as follows:
@@ -115,6 +117,7 @@ To remove a user role from a group role, you use REVOKE statement:
 For example, to remove doe user role from the sales group role, you use the following statement:
 
 >REVOKE sales FROM doe;
+```
 
 #### See the following example:
 ```
@@ -123,7 +126,6 @@ CREATE ROLE sales NOINHERIT;
 CREATE ROLE marketing NOINHERIT;
 GRANT sales to doe;
 GRANT marketing to sales;
-```
 
 After executing the following statement:
 
@@ -148,6 +150,8 @@ Removing roles
 You can use the DROP ROLE statement to remove a group role or user role.
 
 >DROP ROLE role_name;
+
+```
 
 # Backup/restore Database
 
@@ -178,16 +182,22 @@ dvdrental: is the name of the database that we want to back
 
 #### How to backup all databases
 
+```
 >pg_dumpall -U postgres > c:\pgbackup\all.sql
+```
 
 #### How to backup database object definitions
 
+```
 To backup all objects in all databases, including roles, tablespaces, databases, schemas, tables, indexes, triggers, functions, constraints, views, ownerships and privileges, you use the following command:
 
 >pg_dumpall --schema-only > c:\pgdump\definitiononly.sql
+
 If you want to backup role definition only, use the following command:
 
 >pg_dumpall --roles-only > c:\pgdump\allroles.sql
+
 If you want to backup tablespaces definition, use the following command:
 
 >pg_dumpall --tablespaces-only > c:\pgdump\allroles.sql
+```
