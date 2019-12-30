@@ -59,7 +59,10 @@ list all the databases
 
 # Reset Forgotten Password For postgres User - http://www.postgresqltutorial.com/postgresql-reset-password/
 ```
-PostgreSQL uses the  pg_hba.conf configuration file that is stored in the database data directory to control the client authentication. HBA means host-based authentication. To reset the password for the postgres user, you need to modify some parameters in this configuration file.
+PostgreSQL uses the  pg_hba.conf configuration file that is stored in the database data 
+directory to control the client authentication. HBA means host-based authentication. 
+To reset the password for the postgres user, 
+you need to modify some parameters in this configuration file.
 
 Step 1. Backup the pg_dba.conf
 
@@ -70,21 +73,17 @@ The comment line starts with the # sign.
 local  all   all   trust
 
 PostgreSQL on Windows OS
-	
+
 host    all              postgres           127.0.0.1/32            trust
 
 Step 3. Restart PostgreSQL server e.g., in Linux, you use the following command:
-
-	
 >sudo /etc/init.d/postgresql restart
 
 Step 4. Connect to PostgreSQL database server and change the password of the postgres user.
-
 >ALTER USER postgres with password 'very_secure_password';
 
 Step 5. Restore the pg_db.conf file and restart the server, and connect to the PostgreSQL database server with new password.
-
-sudo /etc/init.d/postgresql restart
+>sudo /etc/init.d/postgresql restart
 
 ```
 ## pgAdmin 3 (default superuser/password)
