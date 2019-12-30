@@ -125,22 +125,69 @@ GRANT sales to doe;
 GRANT marketing to sales;
 ```
 
-- After executing the following statement:
+After executing the following statement:
 
 >SET ROLE sales;
+
 You will have only privileges granted to sales, not the ones that granted to doe.
 
 And after executing the following statement:
 
 >SET ROLE marketing;
+
 You only have privileges granted to marketing, not the ones that granted to admin and doe.
 
 To restore the original privilege, you can use the following statement:
 
 >RESET ROLE;
+
 Notice that only privileges on the database object are inheritable. The LOGIN, SUPERUSER, CREATEROLE, and CREATEDB are the special role that cannot be inherited as an ordinary privilege.
 
 Removing roles
+
 You can use the DROP ROLE statement to remove a group role or user role.
 
 >DROP ROLE role_name;
+
+# Backup/restore Database
+
+>pg_dump -U username -W -F t database_name > c:\backup_file.tar
+
+e.g.:
+```
+C:\>cd C:\Program Files\PostgreSQL\9.2\bin
+pg_dump -U postgres -W -F t dvdrental > c:\pgbackup\dvdrental.tar
+
+-U postgres:  specifies the user to connect to PostgreSQL database server. We used postgres in this example.
+
+-W:  forces pg_dump to prompt for the password before connecting to the PostgreSQL database server. After you hit enter, pg_dump will prompt for the password of postgres user.
+
+-F : specifies the output file format that can be one of the following:
+
+c: custom-format archive file format
+d: directory-format archive
+t:tar
+p: plain text SQL script file).
+Because we want the output file to be a tar-format archive file, we use  -F t in this example.
+
+dvdrental: is the name of the database that we want to back
+
+> c:\pgbackup\dvdrental.tar is the output backup file path.
+
+```
+
+#### How to backup all databases
+
+>pg_dumpall -U postgres > c:\pgbackup\all.sql
+
+#### How to backup database object definitions
+
+To backup all objects in all databases, including roles, tablespaces, databases, schemas, tables, indexes, triggers, functions, constraints, views, ownerships and privileges, you use the following command:
+
+>pg_dumpall --schema-only > c:\pgdump\definitiononly.sql
+If you want to backup role definition only, use the following command:
+
+>pg_dumpall --roles-only > c:\pgdump\allroles.sql
+If you want to backup tablespaces definition, use the following command:
+
+>pg_dumpall --tablespaces-only > c:\pgdump\allroles.sql
