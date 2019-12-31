@@ -55,7 +55,7 @@ def config(filename='database.ini', section='postgresql'):
 #### Connect to the database
     
 ```
-    #!/usr/bin/python
+#!/usr/bin/python
 import psycopg2
 from config import config
  
