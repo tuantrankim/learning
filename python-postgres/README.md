@@ -95,3 +95,53 @@ if __name__ == '__main__':
     connect()
 
 ```
+
+# Transaction
+
+```
+#!/usr/bin/python
+ 
+import psycopg2
+ 
+conn = None
+try:
+    conn = psycopg2.connect(dsn)
+    cur = conn.cursor()
+    # execute 1st statement
+    cur.execute(statement_1)
+    # execute 2nd statement
+    cur.execute(statement_1)
+    # commit the transaction
+    conn.commit()
+    # close the database communication
+    cur.close()
+except psycopg2.DatabaseError as error:
+    print(error)
+finally:
+    if conn is not None:
+        conn.close()
+```
+
+## Transaction using with
+```
+sycopg commits the transaction if no exception occurs within the with block, and otherwise it rolls back the transaction.
+
+Unlike other context manager objects, existing the with block does not close the connection but only terminates the transaction. As the result, you can use the same connection object in the subsequent with statement in another transaction as follows:
+
+```
+
+```
+conn = psycopg2.connect(dsn)
+ 
+# transaction 1
+with conn:
+    with conn.cursor() as cur:
+        cur.execute(sql)
+ 
+# transaction 2
+with conn:
+    with conn.cursor() as cur:
+        cur.execute(sql)
+ 
+conn.close()
+```
