@@ -292,3 +292,8 @@ Second, we can restore table structure only from the dvdrental.tar backup file b
 
 >pg_restore --dbname=dvdrental_tpl --section=pre-data  c:\pgbackup\dvdrental.tar
 ```
+
+# Important cheat sheet
+```
+http://www.postgresqltutorial.com/postgresql-cheat-sheet/
+```
