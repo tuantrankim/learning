@@ -9,12 +9,14 @@
 
 #### Main configuration file
 >ls /etc/postgresql/9.3/main/
+
 >file postgresql.conf
 
 #### Check status of postgresql
 -port 5432 by default
 
 >service postgresql
+
 >service postgresql status
 
 #### Default user for postgresql
