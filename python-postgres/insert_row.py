@@ -32,3 +32,12 @@ def insert_vendor(vendor_name):
             conn.close()
  
     return vendor_id
+
+ """ 
+# Testing
+
+if __name__ == '__main__':
+    # insert one vendor
+    insert_vendor("3M Co.")
+    
+"""
