@@ -49,11 +49,12 @@ def config(filename='database.ini', section='postgresql'):
         raise Exception('Section {0} not found in the {1} file'.format(section, filename))
  
     return db
-    ```
+
+```
     
-    #### Connect to the database
+#### Connect to the database
     
-    ```
+```
     #!/usr/bin/python
 import psycopg2
 from config import config
