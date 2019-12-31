@@ -54,11 +54,33 @@ list all the databases
 
 - Create another user
 >CREATE USER user_2 WITH PASSWORD 'test123';
+
 >\du
 
 - Drop the user
+
 >DROPT USER user_2
 
+Grant all persmission on a specific database
+```
+The user needs access to the database, obviously:
+
+GRANT CONNECT ON DATABASE my_db TO my_user;
+And (at least) the USAGE privilege on the schema:
+
+GRANT USAGE ON SCHEMA public TO my_user;
+Then, all permissions for all tables (requires Postgres 9.0 or later):
+
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO my_user;
+And don't forget sequences (if any):
+
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO my_user;
+
+connect to database
+
+psql -U my_user -h 127.0.0.1 -d database_name
+
+```
 # Reset Forgotten Password For postgres User 
 
 http://www.postgresqltutorial.com/postgresql-reset-password/
