@@ -319,3 +319,19 @@ Second, we can restore table structure only from the dvdrental.tar backup file b
 ```
 http://www.postgresqltutorial.com/postgresql-cheat-sheet/
 ```
+
+# Create/Drop database and execute script
+```
+-login as posgres
+    psql posgres
+    -create database
+    CREATE DATABASE raovat;
+    - or drop database
+    DROP DATABASE raovat;
+    - exit
+    \q
+    - connect to database raovat
+    psql raovat
+    - Execute a sql script test.sql
+    \i ~\PATH\TO\test.sql
+ ```
