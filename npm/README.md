@@ -7,7 +7,7 @@ npm list -g --depth 0
 ```
 npm uninstall -g @angular/cli
 npm cache clean --force
-``
+```
 
 # Uninstall global package
 ```
