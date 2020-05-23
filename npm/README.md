@@ -21,3 +21,9 @@ npm install -g @angular/cli
 OR
 npm install -g @angular/cli@8.3.14
 ```
+# npm prune removes "extraneous" packages in app_modules
+
+```
+npm prune [<name> [<name ...]]
+Extraneous packages are packages that are not listed on the parent package's dependencies list in package.json
+```
