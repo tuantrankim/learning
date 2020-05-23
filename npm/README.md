@@ -14,3 +14,4 @@ npm cache clean --force
 npm install -g @angular/cli
 OR
 npm install -g @angular/cli@8.3.14
+```
